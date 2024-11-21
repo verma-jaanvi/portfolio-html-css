@@ -1,0 +1,410 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans';
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+nav{
+    background: #09102a;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 9;
+}
+
+.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.active,nav a:hover{
+    background:#1B1A55;
+    transition: .5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+@media screen and (max-width: 952px){
+    .logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }   
+}
+@media screen and (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #1B1A55;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 9;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover , .active{
+        background: none;
+        color:#535C91;
+    }
+    nav{
+        margin-top: -10px;
+        position: fixed;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+
+}
+
+
+
+#main{
+    position: relative;
+}
+
+#page{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+#page>img{
+    position: absolute;
+    right: 5%;
+    top: 52%;
+    transform: translateY(-60%);
+    width: 50%;
+}
+
+
+#nav>input{
+    padding: 10px 50px;
+    border-radius: 5px;
+    border: 1px solid #dadada;
+    text-transform: uppercase;
+}
+
+#text{
+    padding: 30px 50px;
+    position: relative;
+    top: 18%;
+    left: 8%;
+    height: 75%;
+    width: 35%;
+}
+
+.web{
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(67, 67, 180);
+    margin-top: 1.2rem;
+}
+
+#text>h1{
+    font-size: 60px;
+    line-height: 1;
+    margin-top: 0.6rem;
+    color: white;
+}
+
+#text>h4{
+    color: rgb(157, 157, 157);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 4rem 0 0 0;
+}
+
+#text> h2{
+    color: rgb(170, 170, 170);
+}
+
+/*button*/
+
+#buttons>button{
+    padding: 10px 22px;
+    border-radius:  20px;
+    background: rgb(40, 39, 39);
+    border: none;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+#buttons{
+    margin: 20px -20px;
+}
+
+#buttons>button>a{
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+#buttons> button>a:hover{
+    color: rgb(107, 121, 201);
+    transition: all 0.5s;
+
+}
+
+#buttons>#b2{
+    margin-left: 20px;
+}
+
+/*skills*/
+.skills{
+    background: linear-gradient(black ,#09102a, #081130,#070F2B, black);
+    margin: 0;
+    padding: 3em 3rem 5rem 3rem;
+
+}
+
+.tareef{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 11rem;
+}
+.skills> h1{
+    color: white;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.tareef >.content> h1{
+    color:#535C91;
+}
+
+.skills > .tareef> .content > p{
+    color:#dadada;
+    margin: 1rem 0;
+    line-height: 1.5rem;
+}
+
+.skills >.tareef > h1, p {
+    float: left;
+
+}
+
+.skill-name{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: #9290C3;
+    gap: 3rem;
+}
+.skill-name .box h1{
+    font-size: 1.2rem;
+}
+
+.skill-name .box p{
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+
+/*services*/
+
+.service{
+    background: black;
+    margin: 0;
+    color:#9290C3;
+    padding: 3em 3rem 5rem 3rem;
+}
+
+.service > h1{
+    color: white;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.service > .service-lelo{
+    padding: 3rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5rem;
+    text-align: center;
+}
+
+.service-lelo > .opt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1B1A55;
+    padding: 1.5rem 2rem 3rem 2rem;
+    border-radius: 2rem;
+    transition: all 1.5s ease;
+}
+
+.opt > .logo{
+    padding: 1rem;
+}
+
+.opt:hover{
+    transform:scale(1.1);
+    transition: all 2s ease;
+    color: white;
+    background-color: #09102a;
+}
+
+.opt > h1{
+    padding: 0 0 0.5rem 0;
+    font-size: 1rem;
+    font-family:'Franklin Gothic Medium';
+}
+
+/*contact*/
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+    color: #4964c3d9
+}
+  
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    padding: 0 2rem;
+    background: linear-gradient( black, #081130, #1B1A55);
+    color: white;
+}
+  
+.contact-section-header > h1 {
+    font-size: 3.5rem;
+}
+  
+@media (max-width: 28.75em) {
+    .contact-section-header > h1 {
+      font-size: 4rem;
+    }
+}
+  
+.contact-section-header > p {
+    font-size: 1.6rem;
+    font-style: italic;
+}
+  
+.contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+  
+.contact-details {
+    font-size: 2.4rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+}
+  
+.contact-details:hover {
+    transform: translateY(8px);
+    color: white;
+    transition: all 1s ease;
+
+}
+  
+  
+footer {
+    font-weight: 300;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    background: rgb(29, 29, 29);
+    border-top: 4px solid #1f44cb;
+    color: white;
+}
+  
+footer > p {
+    margin: 2rem;
+}
+  
+footer i {
+    vertical-align: middle;
+}
+  
+@media (max-width: 28.75em) {
+    footer {
+      flex-direction: column;
+      text-align: center;
+    }
+}
+
+@media screen and (max-width: 858px){
+    #page>img{
+        display:none;
+
+    }
+    #page{
+       padding-bottom: 100px;
+       margin-bottom: 200px;
+    }
+    body{
+       background: black;
+       overflow-x: hidden;
+    }
+
+
+}
